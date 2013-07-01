@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+
+    <!-- Scripts -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/iscroll-lite.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/knockout-2.2.1.js"></script>
+    <script src="js/knockout.mapping.js"></script>
+    <script src="js/app-viewmodel.js"></script>
+    <script src="js/app.js"></script>
+  <title>Skyrim Companion</title>
+</head>
+<body>
+<header>
+    <h1>Skyrim Companion</h1>
+</header>
+<div id="wrapper">
+    <div id="main-content">
+        <div id="pages" class="flexslider">
+            <ul class="slides">
+                <li id="alchemy" class="current">
+                    <h2>Alchemy</h2>
+                    <ul id="ingredients" data-bind="foreach: alchemy.lists.ingredients">
+                        <li data-bind="text: name"></li>
+                    </ul>
+                </li>
+                <li id="enchanting">
+                    <h2>Enchanting</h2>
+                </li>
+                <li id="smithing">
+                    <h2>Smithing</h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="flex-controls">
+        <ul id="tab-bar">
+            <li>Alchemy</li>
+            <li>Enchanting</li>
+            <li>Smithing</li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
